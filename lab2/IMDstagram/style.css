@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 /* NAVIGATIE */
 
 nav ul {
@@ -31,4 +35,22 @@ nav li.branding {
 
 nav li.graffiti {
     order: 5;
+}
+
+/* PHOTOS */
+
+img {
+    max-width: 100%;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section div {
+    flex: 1 1 20%;
+    padding: 20px;
+    
 }
