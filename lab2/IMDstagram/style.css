@@ -1,0 +1,34 @@
+/* NAVIGATIE */
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+  
+nav li {
+    text-align: center;
+    flex: 1 1 100px;
+}
+
+nav li.typography {
+    order: 1;
+}
+
+nav li.ui {
+    order: 2;
+}
+  
+nav li.logo {
+    background: tomato;
+    order: 3;
+}
+
+nav li.branding {
+    order: 4;
+}
+
+nav li.graffiti {
+    order: 5;
+}
