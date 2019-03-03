@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+img {
+    max-width: 100%;;
+}
+  
+body {
+    background-image: url("images/bg-image.png");
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, p.uppercase {
+    text-transform: uppercase;
+}
+
+.ticket {
+    background-color:white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;;
+}
+
+header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.subheader {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 1;
+}
+
+aside {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+    align-items: center;
+}
+
+footer {
+     display: none;
+ }
