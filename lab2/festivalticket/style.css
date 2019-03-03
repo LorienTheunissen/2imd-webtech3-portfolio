@@ -1,4 +1,5 @@
 * {
+    margin: 0;
     box-sizing: border-box;
     text-align: center;
   }
@@ -8,7 +9,7 @@ img {
 }
   
 body {
-    background-color: blue;
+    background-image: url("images/bg-image.png");
     font-family: 'Lato', sans-serif;
 }
 
@@ -22,7 +23,7 @@ h1, h2, p.uppercase {
     grid-template-columns: repeat(4, 1fr);
     padding: 50px;
     margin: 50px;
-    border: 1px solid black;
+    align-items: center;
 }
 
 header {
