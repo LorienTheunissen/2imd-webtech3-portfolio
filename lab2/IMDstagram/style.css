@@ -5,40 +5,23 @@
 /* NAVIGATIE */
 
 nav ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
   
 nav li {
-    text-align: center;
     flex: 1 1 100px;
-}
-
-nav li.typography {
-    order: 1;
-}
-
-nav li.ui {
-    order: 2;
+    text-align: center;
 }
   
 nav li.logo {
     background: tomato;
-    order: 3;
-}
-
-nav li.branding {
-    order: 4;
-}
-
-nav li.graffiti {
-    order: 5;
+    flex: 1 0 100px;
 }
 
 /* PHOTOS */
-
   
 section {
     display: flex;
@@ -48,6 +31,26 @@ section {
 }
   
 section div {
-    padding: 10px;
+    padding: 5px;
     flex: 1 0 25%;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
+    .typography {
+        order: 1;
+    }
+    .ui {
+        order: 2;
+    }
+    nav ul li.logo {
+        order: 3;
+    }
+    .branding {
+        order: 4;
+    }
+    .graffiti {
+        order: 5;
+    }
 }
