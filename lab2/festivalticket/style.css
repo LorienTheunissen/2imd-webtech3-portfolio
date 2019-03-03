@@ -12,16 +12,17 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, p {
+h1, h2, p.uppercase {
     text-transform: uppercase;
 }
 
 .ticket {
     background-color:white;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     padding: 50px;
     margin: 50px;
+    border: 1px solid black;
 }
 
 header {
@@ -29,15 +30,26 @@ header {
     grid-column: 1 / span 3;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
+.subheader {
     grid-row: 2 / span 1;
     grid-column: 1 / span 3;
 }
 
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+}
+
 aside {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 4;
     grid-column: 4 / span 1;
+    align-items: center;
+}
+
+footer {
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 3;
     align-items: center;
 }
