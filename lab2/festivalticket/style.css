@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+img {
+    max-width: 100%;;
+}
+  
+body {
+    background-color: blue;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, p {
+    text-transform: uppercase;
+}
+
+.ticket {
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    padding: 50px;
+    margin: 50px;
+}
+
+header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+}
+
+aside {
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 1;
+    align-items: center;
+}
