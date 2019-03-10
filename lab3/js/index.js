@@ -63,13 +63,21 @@ class App {
     this.btnAdd = document.querySelector("#btnAddNote");
     // Als je klikt op button, wordt functie create aangemaakt
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
-    // this.loadNotesFromStorage();
+    this.loadNotesFromStorage();
   }
   
   loadNotesFromStorage() {
     // HINT🤩
     // load all notes from storage here and add them to the screen
     // something like note.add() in a loop would be nice
+    let notesFromStorage = JSON.parse(localStorage.getItem('notes'));
+
+    if (notesFromStorage) {
+      notesFromStorage.forEach(note => {
+        let newNote = new Note(note.title);
+        newNote.add();
+      });
+    }
   }
    
   createNote(e){
