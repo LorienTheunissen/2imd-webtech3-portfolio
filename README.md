@@ -5,8 +5,7 @@
 ## Lab2: CSS Grid & Flexbox
 
 * [IMDstagram](https://codepen.io/lorien-theunissen/pen/qvbpYG)
-* [Festivalticket (mobile)](https://codepen.io/lorien-theunissen/pen/KEvpvE)
-* [Festivalticket (desktop)](https://codepen.io/lorien-theunissen/pen/aMyOyd)
+* [Festivalticket](https://codepen.io/lorien-theunissen/pen/EMExKM)
 
 ## Lab3: ES6
 
