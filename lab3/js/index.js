@@ -49,6 +49,11 @@ class Note {
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
     this.remove()
+
+    // remove item from array in localstorage;
+    // 1 - lees array uit localstorage
+    // 2 - gooi juist element eruit
+    // 3 - save array opneiuw in localstorage
     
   } 
 }
