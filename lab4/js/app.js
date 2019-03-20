@@ -7,7 +7,15 @@ class Weather
     }
 
     getCurrentLocation(){
-        
+        //console.log("getting current position");
+        navigator.geolocation.getCurrentPosition(position =>{
+            let lat = position.coords.latitude;
+            let lng = position.coords.longitude;
+            this.getWeather(lat, lng);
+            console.log(position);
+        }, err => {
+            console.log("error");
+        });
     }    
 
     getWeather(position){
@@ -19,7 +27,7 @@ class Weather
     }
 
     init(){
-        console.log('initialize');
+        //console.log('initialize');
         console.log(navigator);
         this.getCurrentLocation();
     }
