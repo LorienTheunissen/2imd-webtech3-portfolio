@@ -54,7 +54,12 @@ class Note {
     // 1 - lees array uit localstorage
     // 2 - gooi juist element eruit
     // 3 - save array opneiuw in localstorage
-    
+
+    let notesArray = JSON.parse(localStorage.getItem('notes'));
+    let click = notesArray.indexOf(this);
+    notesArray.splice(click,1);
+    localStorage.setItem('notes', JSON.stringify(notesArray));
+
   } 
 }
 
