@@ -18,8 +18,15 @@ class Weather
         });
     }    
 
-    getWeather(position){
-        
+    getWeather(lat, lng){
+        let url = `http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${this.API_KEY}/${lat},${lng}?units=si`;
+        fetch(url)
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+           console.log(json.currently.summary);
+        })
     }
 
     updateUI(){
