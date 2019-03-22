@@ -4,8 +4,8 @@
 
 ## Lab2: CSS Grid & Flexbox
 
-* [IMDstagram](https://codepen.io/lorien-theunissen/pen/qvbpYG)
-* [Festivalticket](https://codepen.io/lorien-theunissen/pen/EMExKM)
+* [IMDstagram (Codepen)](https://codepen.io/lorien-theunissen/pen/qvbpYG)
+* [Festivalticket (Codepen)](https://codepen.io/lorien-theunissen/pen/EMExKM)
 
 ## Lab3: ES6
 
