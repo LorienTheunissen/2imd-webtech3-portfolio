@@ -9,4 +9,8 @@
 
 ## Lab3: ES6
 
-* [Notes App](https://codepen.io/lorien-theunissen/pen/EMmwbW)
+* [Notes App (Codepen)](https://codepen.io/lorien-theunissen/pen/EMmwbW)
+
+## Lab4: API's
+
+## Lab5: Node.js
