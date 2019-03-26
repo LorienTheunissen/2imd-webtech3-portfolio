@@ -11,7 +11,7 @@ class Note {
     let newNoteBtn = document.createElement('a');
 
     newNoteText.appendChild(document.createTextNode(title));
-    newNoteBtn.appendChild(document.createTextNode('Remove'))
+    newNoteBtn.appendChild(document.createTextNode('Remove'));
 
     newNote.className = 'card';
     newNoteBtn.className = 'card-remove';
@@ -41,7 +41,7 @@ class Note {
     // if you want to store arrays, look at JSON.parse and JSON.stringify
     let notesArray = localStorage.getItem('notes') ? JSON.parse(localStorage.getItem('notes'))  : [];
     notesArray.push(this);
-
+    
     localStorage.setItem('notes', JSON.stringify(notesArray));
   }
   
@@ -56,8 +56,12 @@ class Note {
     // 3 - save array opneiuw in localstorage
 
     let notesArray = JSON.parse(localStorage.getItem('notes'));
+
     let click = notesArray.indexOf(this);
-    notesArray.splice(click,1);
+    
+    // splice() method adds/removes items to/from an array, and returns the removed item(s)
+    notesArray.splice(click, 1);
+    
     localStorage.setItem('notes', JSON.stringify(notesArray));
 
   } 
@@ -116,4 +120,5 @@ class App {
   
 }
 
+let i = 0;
 let app = new App();
