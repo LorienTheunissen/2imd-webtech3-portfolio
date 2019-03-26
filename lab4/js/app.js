@@ -1,8 +1,9 @@
 class Weather
 {
-    constructor(API_KEY){
-        this.API_KEY = API_KEY;
-        //console.log(API_KEY);
+    constructor(API_KEY_W, API_KEY_G){
+        this.API_KEY_W = API_KEY_W;
+        this.API_KEY_G = API_KEY_G;
+        //console.log(API_KEY_W, API_KEY_G);
         this.init();
     }
 
@@ -19,18 +20,17 @@ class Weather
     }    
 
     getWeather(lat, lng){
-        let url = `http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${this.API_KEY}/${lat},${lng}?units=si`;
+        let url = `http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${this.API_KEY_W}/${lat},${lng}?units=si`;
         fetch(url)
         .then(response => {
             return response.json();
         })
         .then(json => {
-           console.log(json.currently.summary);
+            let temp = document.createElement("h1");
+            temp.innerHTML = json.currently.summary;
+            document.querySelector("#container").appendChild(temp);
+            console.log(json.currently.summary);
         })
-    }
-
-    updateUI(){
-        
     }
 
     init(){
@@ -41,4 +41,4 @@ class Weather
 
 }
 
-let app = new Weather('feb187c5167915f71c0d58ae86c01760');
+let app = new Weather('feb187c5167915f71c0d58ae86c01760', 'GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
