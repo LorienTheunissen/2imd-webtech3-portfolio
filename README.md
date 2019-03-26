@@ -4,9 +4,13 @@
 
 ## Lab2: CSS Grid & Flexbox
 
-* [IMDstagram](https://codepen.io/lorien-theunissen/pen/qvbpYG)
-* [Festivalticket](https://codepen.io/lorien-theunissen/pen/EMExKM)
+* [IMDstagram (Codepen)](https://codepen.io/lorien-theunissen/pen/qvbpYG)
+* [Festivalticket (Codepen)](https://codepen.io/lorien-theunissen/pen/EMExKM)
 
 ## Lab3: ES6
 
-* [Notes App](https://codepen.io/lorien-theunissen/pen/EMmwbW)
+* [Notes App (Codepen)](https://codepen.io/lorien-theunissen/pen/EMmwbW)
+
+## Lab4: API's
+
+## Lab5: Node.js
