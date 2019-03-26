@@ -33,6 +33,18 @@ class Weather
         })
     }
 
+    getGiphy(gif){
+        let url = `//api.giphy.com/v1/stickers/search?api_key=${this.API_KEY2}&q=${gif}`;
+        fetch(url)
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+            // GET GIPHY
+        })
+    }
+
+
     init(){
         //console.log('initialize');
         console.log(navigator);
