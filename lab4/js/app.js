@@ -1,3 +1,17 @@
+/* GIPHY ICONS VALUES via https://www.dr-lex.be/software/darksky-icons.html
+clear-day
+clear-night
+partly-cloudy-day
+partly-cloudy-night
+cloudy
+rain
+sleet
+snow
+wind
+fog
+*/
+
+
 class Weather
 {
     constructor(API_KEY_W, API_KEY_G){
