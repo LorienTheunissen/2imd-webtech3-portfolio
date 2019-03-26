@@ -34,7 +34,7 @@ class Weather
     }
 
     getGiphy(gif){
-        let url = `//api.giphy.com/v1/stickers/search?api_key=${this.API_KEY2}&q=${gif}`;
+        let url = `//api.giphy.com/v1/gifs/search?api_key=${this.API_KEY_G}&q=${gif}`;
         fetch(url)
         .then(response => {
             return response.json();
