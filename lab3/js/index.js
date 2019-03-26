@@ -42,6 +42,7 @@ class Note {
     let notesArray = localStorage.getItem('notes') ? JSON.parse(localStorage.getItem('notes'))  : [];
     notesArray.push(this);
     
+    // JSON.stringify() method converts a JavaScript object or value to a JSON string
     localStorage.setItem('notes', JSON.stringify(notesArray));
   }
   
