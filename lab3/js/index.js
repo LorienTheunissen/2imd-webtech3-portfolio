@@ -49,7 +49,6 @@ class Note {
   remove(){
     // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
     // in this function, 'this' will refer to the current note element
-    this.remove()
 
     // remove item from array in localstorage;
     // 1 - lees array uit localstorage
@@ -58,13 +57,14 @@ class Note {
 
     let notesArray = JSON.parse(localStorage.getItem('notes'));
 
-    let click = notesArray.indexOf(this);
+    let index = notesArray.findIndex(note => {
+      return note.element = this;
+    })
     
     // splice() method adds/removes items to/from an array, and returns the removed item(s)
-    notesArray.splice(click, 1);
+    notesArray.splice(index, 1);
     
     localStorage.setItem('notes', JSON.stringify(notesArray));
-
   } 
 }
 
