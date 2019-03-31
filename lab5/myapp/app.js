@@ -8,28 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-var router = express.Router();
-
-router.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
-router.get('/messages', function (req, res) {
-	res.send("GET messages");
-});
-
-router.get('/messages/:id', function (req, res) {
-	var id = req.params.id;
-	res.send("GET message with :id " + id);
-});
-
-app.post('/messages', function (req, res){
-	res.send("POST messages");
-});
-
-router.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -60,4 +38,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = router;
+module.exports = app;
