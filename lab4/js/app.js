@@ -45,14 +45,27 @@ class Giphy {
     constructor(API_KEY_GIPHY){
         this.API_KEY_GIPHY = API_KEY_GIPHY;
         console.log(API_KEY_GIPHY);
-        this.init();
+        this.getGif();
+
     }
 
-    init(){
-        console.log('initialize');
+    getGif(){
+        // http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5
+        let url = `http://cors-anywhere.herokuapp.com/http://api.giphy.com/v1/gifs/search?q=storm&api_key=${this.API_KEY_GIPHY}`;
+        console.log(url);
+        fetch(url)
+        .then(response =>{
+            return response.json();
+        })
+        .then(json =>{
+            console.log(json);
+            let gif = document.createElement("div");
+            document.querySelector("div").innerHTML+= `<img src="${json.data[0].images.downsized.url}"></img>`;
+            //document.querySelector("#gif").append(gif);
+        })
     }
 }
 
 let app = new Weather('feb187c5167915f71c0d58ae86c01760');
-// let app = new Giphy('GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
+let gif = new Giphy('GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
 // https://developers.giphy.com/docs/
