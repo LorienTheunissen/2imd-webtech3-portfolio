@@ -1,17 +1,15 @@
 class Weather
 {
-    constructor(API_KEY_WEATHER, API_KEY_GIPHY){
+    constructor(API_KEY_WEATHER){
         this.API_KEY_WEATHER = API_KEY_WEATHER;
-        this.API_KEY_GIPHY = API_KEY_GIPHY;
-        console.log(API_KEY_WEATHER, API_KEY_GIPHY);
+        console.log(API_KEY_WEATHER);
         this.init();
     }
 
     init(){
-        //console.log('initialize');
+        console.log('initialize');
         console.log(navigator);
         this.getCurrentLocation();
-        this.getSticker();
     }
 
     getCurrentLocation(){
@@ -27,7 +25,9 @@ class Weather
     }    
 
     getWeather(lat, lng){
+        // http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/feb187c5167915f71c0d58ae86c01760/51.0241373,4.485428800000001?units=si
         let url = `http://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${this.API_KEY_WEATHER}/${lat},${lng}?units=si`;
+        console.log(url);
         fetch(url)
         .then(response => {
             return response.json();
@@ -39,12 +39,20 @@ class Weather
             console.log(json.currently.summary);
         })
     }
+}
 
-    getSticker(){
-        console.log("🚀");
+class Giphy {
+    constructor(API_KEY_GIPHY){
+        this.API_KEY_GIPHY = API_KEY_GIPHY;
+        console.log(API_KEY_GIPHY);
+        this.init();
+    }
+
+    init(){
+        console.log('initialize');
     }
 }
 
-let app = new Weather('feb187c5167915f71c0d58ae86c01760', 'GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
-
+let app = new Weather('feb187c5167915f71c0d58ae86c01760');
+// let app = new Giphy('GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
 // https://developers.giphy.com/docs/
