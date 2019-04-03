@@ -1,8 +1,24 @@
+/*
+DARK SKY POSSIBLE VALUES
+clear-day
+clear-night
+partly-cloudy-day
+partly-cloudy-night
+cloudy
+rain
+sleet
+snow
+wind
+fog
+*/
+
 class Weather
 {
-    constructor(API_KEY_WEATHER){
+    constructor(API_KEY_WEATHER, API_KEY_GIPHY){
         this.API_KEY_WEATHER = API_KEY_WEATHER;
-        console.log(API_KEY_WEATHER);
+        // console.log(API_KEY_WEATHER);
+        this.API_KEY_GIPHY = API_KEY_GIPHY;
+        // console.log(API_KEY_GIPHY);
         this.init();
     }
 
@@ -37,21 +53,15 @@ class Weather
             temp.innerHTML = `This is what the weather looks like today: ${json.currently.summary}`;
             document.querySelector("#app").appendChild(temp);
             console.log(json.currently.summary);
+            let summary = json.currently.summary;
+            console.log(summary);
+            this.getGiphy(summary);
         })
-    }
-}
+    };
 
-class Giphy {
-    constructor(API_KEY_GIPHY){
-        this.API_KEY_GIPHY = API_KEY_GIPHY;
-        console.log(API_KEY_GIPHY);
-        this.getGif();
-
-    }
-
-    getGif(){
+    getGiphy(summary){
         // http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5
-        let url = `http://cors-anywhere.herokuapp.com/http://api.giphy.com/v1/gifs/search?q=storm&api_key=${this.API_KEY_GIPHY}`;
+        let url = `http://cors-anywhere.herokuapp.com/http://api.giphy.com/v1/gifs/search?q=${summary}&api_key=${this.API_KEY_GIPHY}`;
         console.log(url);
         fetch(url)
         .then(response =>{
@@ -61,11 +71,9 @@ class Giphy {
             console.log(json);
             let gif = document.createElement("div");
             document.querySelector("div").innerHTML+= `<img src="${json.data[0].images.downsized.url}"></img>`;
-            //document.querySelector("#gif").append(gif);
         })
     }
 }
 
-let app = new Weather('feb187c5167915f71c0d58ae86c01760');
-let gif = new Giphy('GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
+let app = new Weather('feb187c5167915f71c0d58ae86c01760', 'GNAEtDyVKZCH4mCW2LxrD6omQbpmpdHO');
 // https://developers.giphy.com/docs/
